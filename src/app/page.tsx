@@ -14,6 +14,8 @@ const colors = {
   white: "#FFFFFF",
   text: "#333333",
   lightText: "#666666",
+  warningRed: "#C75050",
+  warningBg: "#FDF6F6",
 };
 
 // ===== SVG装飾 =====
@@ -329,7 +331,7 @@ function Header() {
             くるめ生活サポート
           </a>
 
-          <div style={{ display: "flex", gap: "32px", alignItems: "center" }} className="desktop-menu">
+          <div style={{ display: "flex", gap: "24px", alignItems: "center" }} className="desktop-menu">
             {menuItems.map((item) => (
               <a
                 key={item.href}
@@ -346,7 +348,7 @@ function Header() {
               </a>
             ))}
             <a
-              href="tel:070-2493-5340"
+              href="tel:050-1784-1171"
               style={{
                 backgroundColor: colors.amber,
                 color: colors.white,
@@ -358,6 +360,28 @@ function Header() {
               }}
             >
               電話相談
+            </a>
+            <a
+              href="https://lin.ee/0YYiaRw"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                backgroundColor: "#06C755",
+                color: colors.white,
+                padding: "12px 24px",
+                borderRadius: "4px",
+                textDecoration: "none",
+                fontSize: "15px",
+                fontWeight: 600,
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "18px", height: "18px" }}>
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+              </svg>
+              LINE
             </a>
           </div>
 
@@ -466,7 +490,7 @@ function Header() {
             </a>
           ))}
           <a
-            href="tel:070-2493-5340"
+            href="tel:050-1784-1171"
             style={{
               display: "block",
               backgroundColor: colors.amber,
@@ -481,6 +505,31 @@ function Header() {
             }}
           >
             電話で相談する
+          </a>
+          <a
+            href="https://lin.ee/0YYiaRw"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+              backgroundColor: "#06C755",
+              color: colors.white,
+              padding: "18px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontSize: "18px",
+              fontWeight: 600,
+              textAlign: "center",
+              marginTop: "12px",
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "20px", height: "20px" }}>
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+            </svg>
+            LINEで相談する
           </a>
         </div>
       )}
@@ -502,9 +551,9 @@ function Hero() {
   const softGold = "rgba(196, 169, 98, 0.5)";
 
   const photos = [
-    "https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=600&q=80", // 芝刈り・庭作業
-    "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80", // 外壁・住宅メンテナンス
-    "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80", // 庭の手入れ・緑のある暮らし
+    "/images/IMG_5878.JPG",
+    "/images/IMG_5876.JPG",
+    "/images/IMG_5888.JPG",
   ];
 
   return (
@@ -649,18 +698,32 @@ function Hero() {
             letterSpacing: "0.5px",
           }}
         >
-          暮らしの「ちょっと困った」をお手伝いします。
+          介護保険外の「ちょっと困った」もご相談ください
         </p>
         <p
           style={{
             fontSize: "16px",
             color: colors.lightText,
             marginTop: "16px",
+            letterSpacing: "0.5px",
+            lineHeight: 1.8,
+            maxWidth: "500px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          電球交換・片付け・草取りなど、制度では対応しにくい軽作業を出張でお手伝いします。
+        </p>
+        <p
+          style={{
+            fontSize: "16px",
+            color: colors.lightText,
+            marginTop: "12px",
             letterSpacing: "1px",
             lineHeight: 1.8,
           }}
         >
-          東久留米・小平エリア
+          東久留米市・小平市・西東京市
         </p>
       </div>
 
@@ -668,47 +731,79 @@ function Hero() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
           gap: "16px",
           padding: "0 24px 48px",
-          flexWrap: "wrap",
         }}
       >
-        <a
-          href="tel:070-2493-5340"
+        <div
           style={{
-            backgroundColor: colors.amber,
+            display: "flex",
+            justifyContent: "center",
+            gap: "16px",
+            flexWrap: "wrap",
+          }}
+        >
+          <a
+            href="tel:050-1784-1171"
+            style={{
+              backgroundColor: colors.amber,
+              color: colors.white,
+              padding: "18px 36px",
+              borderRadius: "4px",
+              fontSize: "18px",
+              fontWeight: 600,
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              boxShadow: "0 4px 15px rgba(212, 137, 42, 0.3)",
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: "20px", height: "20px" }}>
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            050-1784-1171
+          </a>
+          <a
+            href="#contact"
+            style={{
+              backgroundColor: "transparent",
+              color: colors.darkGreen,
+              padding: "18px 36px",
+              borderRadius: "4px",
+              fontSize: "18px",
+              fontWeight: 600,
+              textDecoration: "none",
+              border: `1px solid ${colors.lightGreen}`,
+            }}
+          >
+            お見積り無料
+          </a>
+        </div>
+        <a
+          href="https://lin.ee/0YYiaRw"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: "#06C755",
             color: colors.white,
             padding: "18px 36px",
-            borderRadius: "4px",
+            borderRadius: "50px",
             fontSize: "18px",
             fontWeight: 600,
             textDecoration: "none",
             display: "flex",
             alignItems: "center",
             gap: "12px",
-            boxShadow: "0 4px 15px rgba(212, 137, 42, 0.3)",
+            boxShadow: "0 4px 15px rgba(6, 199, 85, 0.3)",
           }}
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: "20px", height: "20px" }}>
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+          <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "22px", height: "22px" }}>
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
           </svg>
-          070-2493-5340
-        </a>
-        <a
-          href="#contact"
-          style={{
-            backgroundColor: "transparent",
-            color: colors.darkGreen,
-            padding: "18px 36px",
-            borderRadius: "4px",
-            fontSize: "18px",
-            fontWeight: 600,
-            textDecoration: "none",
-            border: `1px solid ${colors.lightGreen}`,
-          }}
-        >
-          お見積り無料
+          LINEで相談する
         </a>
       </div>
 
@@ -763,7 +858,7 @@ function Hero() {
 function TrustBadges() {
   const badges = [
     {
-      text: "見積り無料",
+      text: "お見積り無料",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "24px", height: "24px" }}>
           <circle cx="12" cy="12" r="10" />
@@ -772,7 +867,7 @@ function TrustBadges() {
       ),
     },
     {
-      text: "事前に金額説明",
+      text: "作業前に料金説明 → ご同意後に開始",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "24px", height: "24px" }}>
           <path d="M9 12l2 2 4-4" />
@@ -789,11 +884,11 @@ function TrustBadges() {
       ),
     },
     {
-      text: "電話説明が苦手でもOK",
+      text: "追加作業は都度確認",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "24px", height: "24px" }}>
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.22 1.02.52 2 .9 2.94" />
-          <path d="M15 7h6M15 11h4" />
+          <path d="M9 11l3 3L22 4" />
+          <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
         </svg>
       ),
     },
@@ -964,7 +1059,7 @@ function Services() {
   const services = [
     {
       title: "電球・照明の交換",
-      desc: "高い場所の電球交換もお任せください",
+      desc: "※電気工事を伴わない範囲",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z" />
@@ -972,8 +1067,8 @@ function Services() {
       ),
     },
     {
-      title: "家具の移動・組立",
-      desc: "重い家具の移動や組み立てをお手伝い",
+      title: "家具の移動／組み立て",
+      desc: "軽作業",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="8" width="18" height="10" rx="1" />
@@ -983,7 +1078,7 @@ function Services() {
     },
     {
       title: "お部屋・物置の片付け",
-      desc: "整理整頓をお手伝いします",
+      desc: "分別サポート",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -992,8 +1087,8 @@ function Services() {
       ),
     },
     {
-      title: "草取り・庭掃除",
-      desc: "お庭のお手入れもお任せください",
+      title: "草取り／簡単な庭掃除",
+      desc: "通路・ブロック際など",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22c-4-2-7-6-7-10 0-3 2-6 5-7 2 3 2 6 2 9" />
@@ -1003,8 +1098,8 @@ function Services() {
       ),
     },
     {
-      title: "買い物代行・見守り",
-      desc: "日常生活のサポートをいたします",
+      title: "買い物代行／見守り同席",
+      desc: "内容により応相談",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="9" cy="21" r="1" />
@@ -1014,8 +1109,8 @@ function Services() {
       ),
     },
     {
-      title: "その他",
-      desc: "まずはお気軽にご相談ください",
+      title: "その他のお困りごと",
+      desc: "まずはご相談ください",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
@@ -1031,7 +1126,7 @@ function Services() {
       <SmallLeafIcon style={{ bottom: "100px", right: "8%", width: "35px", opacity: 0.15, transform: "scaleX(-1)" }} />
 
       <AnimatedSection style={{ maxWidth: "1000px", margin: "0 auto" }}>
-        <SectionTitle en="SERVICE" ja="サービス内容" />
+        <SectionTitle en="SERVICE" ja="対応サービス" />
 
         <div
           style={{
@@ -1116,29 +1211,68 @@ function Services() {
             lineHeight: 1.8,
           }}
         >
-          ※内容によりお受けできない場合があります
+          ※内容によりお受けできない場合があります。
         </p>
       </AnimatedSection>
     </section>
   );
 }
 
-// ===== 写真バナー（庭・ガーデニング） =====
-function GardenBanner() {
-  return (
-    <PhotoBanner
-      src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80"
-      alt="庭・ガーデニングイメージ"
-    />
-  );
-}
-
 // ===== Pricing =====
 function Pricing() {
   const priceItems = [
-    { label: "出張費", price: "1,000", unit: "円", note: "東久留米・小平市内" },
-    { label: "基本作業費", price: "3,500", unit: "円/時間", note: "1時間あたり" },
-    { label: "延長料金", price: "1,500", unit: "円/30分", note: "30分ごと" },
+    { label: "出張費", price: "1,000", unit: "円", note: "東久留米・小平・西東京市内" },
+    { label: "作業費（1時間）", price: "3,500", unit: "円", note: "" },
+    { label: "延長（30分）", price: "1,500", unit: "円", note: "" },
+  ];
+
+  const exampleCategories = [
+    {
+      title: "草取り・庭まわり",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
+          <path d="M12 22c-4-2-7-6-7-10 0-3 2-6 5-7 2 3 2 6 2 9" />
+          <path d="M12 22c4-2 7-6 7-10 0-3-2-6-5-7-2 3-2 6-2 9" />
+          <path d="M12 22V8" />
+        </svg>
+      ),
+      items: [
+        { desc: "スポット草取り（通路・ブロック際など／〜1時間）", price: "4,500円" },
+        { desc: "草取り（少なめ／〜1.5時間）", price: "6,000円" },
+        { desc: "草取り（多め／〜2時間）", price: "7,500円" },
+        { desc: "庭全体など量が多い場合", price: "現地見積（目安 9,000円〜）" },
+      ],
+      note: null,
+    },
+    {
+      title: "簡易剪定（低木・生け垣）",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
+          <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+        </svg>
+      ),
+      items: [
+        { desc: "お試し剪定（〜1時間）", price: "6,000円" },
+        { desc: "しっかり剪定（〜2時間）", price: "9,000円" },
+        { desc: "量が多い場合", price: "現地見積（目安 12,000円〜）" },
+      ],
+      note: "※安全のため、脚立で安全に届く範囲（目安〜2m）の簡易剪定に限ります。",
+    },
+    {
+      title: "片付け・家具移動（軽作業）",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
+          <rect x="3" y="8" width="18" height="10" rx="1" />
+          <path d="M5 8V6a2 2 0 012-2h10a2 2 0 012 2v2M7 18v2M17 18v2" />
+        </svg>
+      ),
+      items: [
+        { desc: "〜1時間", price: "4,500円" },
+        { desc: "〜1.5時間", price: "6,000円" },
+        { desc: "〜2時間", price: "7,500円" },
+      ],
+      note: null,
+    },
   ];
 
   return (
@@ -1153,8 +1287,8 @@ function Pricing() {
       <div id="pricing" style={{ position: "absolute", top: "-100px" }} />
       <SectionDottedCircle style={{ width: "350px", top: "-80px", left: "-100px" }} />
 
-      <AnimatedSection style={{ maxWidth: "700px", margin: "0 auto" }}>
-        <SectionTitle en="PRICE" ja="料金について" />
+      <AnimatedSection style={{ maxWidth: "900px", margin: "0 auto" }}>
+        <SectionTitle en="PRICE" ja="料金の目安（税込）" />
 
         {/* お見積り無料バッジ */}
         <div
@@ -1183,13 +1317,13 @@ function Pricing() {
           </div>
         </div>
 
-        {/* 料金テーブル */}
+        {/* 基本料金テーブル */}
         <div
           style={{
             backgroundColor: colors.cream,
             borderRadius: "16px",
             padding: "8px 0",
-            marginBottom: "40px",
+            marginBottom: "24px",
           }}
         >
           {priceItems.map((item, index) => (
@@ -1201,6 +1335,8 @@ function Pricing() {
                 justifyContent: "space-between",
                 padding: "32px 40px",
                 borderBottom: index < priceItems.length - 1 ? `1px solid rgba(0,0,0,0.06)` : "none",
+                flexWrap: "wrap",
+                gap: "12px",
               }}
             >
               <div>
@@ -1213,20 +1349,22 @@ function Pricing() {
                 >
                   {item.label}
                 </span>
-                <span
-                  style={{
-                    fontSize: "14px",
-                    color: colors.lightText,
-                    marginLeft: "12px",
-                  }}
-                >
-                  {item.note}
-                </span>
+                {item.note && (
+                  <span
+                    style={{
+                      fontSize: "14px",
+                      color: colors.lightText,
+                      marginLeft: "12px",
+                    }}
+                  >
+                    {item.note}
+                  </span>
+                )}
               </div>
               <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
                 <span
                   style={{
-                    fontSize: "clamp(32px, 6vw, 40px)",
+                    fontSize: "clamp(28px, 5vw, 36px)",
                     fontWeight: 500,
                     color: colors.darkGreen,
                     fontFamily: "var(--font-shippori), serif",
@@ -1246,19 +1384,19 @@ function Pricing() {
         <div
           style={{
             backgroundColor: "rgba(90, 143, 60, 0.08)",
-            padding: "56px 40px",
+            padding: "40px",
             borderRadius: "16px",
             textAlign: "center",
-            position: "relative",
+            marginBottom: "24px",
           }}
         >
-          <div style={{ fontSize: "16px", color: colors.lightText, marginBottom: "20px", letterSpacing: "2px" }}>
+          <div style={{ fontSize: "16px", color: colors.lightText, marginBottom: "16px", letterSpacing: "2px" }}>
             最低料金
           </div>
           <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "6px" }}>
             <span
               style={{
-                fontSize: "clamp(52px, 12vw, 72px)",
+                fontSize: "clamp(42px, 10vw, 56px)",
                 fontWeight: 500,
                 color: colors.darkGreen,
                 fontFamily: "var(--font-shippori), serif",
@@ -1267,12 +1405,178 @@ function Pricing() {
             >
               4,500
             </span>
-            <span style={{ fontSize: "24px", color: colors.darkGreen, fontWeight: 500 }}>円〜</span>
+            <span style={{ fontSize: "20px", color: colors.darkGreen, fontWeight: 500 }}>円（税込）</span>
           </div>
-          <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "24px", lineHeight: 1.8 }}>
-            出張費1,000円 + 基本作業費3,500円
+          <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "16px", lineHeight: 1.8 }}>
+            出張費＋作業1時間相当
           </div>
         </div>
+
+        {/* 補足 */}
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "16px",
+            color: colors.text,
+            marginBottom: "80px",
+            lineHeight: 1.8,
+            backgroundColor: colors.cream,
+            padding: "20px 24px",
+            borderRadius: "8px",
+          }}
+        >
+          ※作業前に必ず料金を提示し、ご同意後に開始します。追加作業は都度確認します。
+        </p>
+
+        {/* よくあるご依頼の料金目安 */}
+        <h3
+          style={{
+            fontSize: "clamp(22px, 4vw, 28px)",
+            fontWeight: 500,
+            color: colors.darkGreen,
+            textAlign: "center",
+            marginBottom: "48px",
+            fontFamily: "var(--font-shippori), serif",
+            letterSpacing: "2px",
+          }}
+        >
+          よくあるご依頼の料金目安
+        </h3>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "24px",
+            marginBottom: "40px",
+          }}
+        >
+          {exampleCategories.map((category, catIndex) => (
+            <div
+              key={catIndex}
+              style={{
+                backgroundColor: colors.cream,
+                borderRadius: "16px",
+                padding: "32px",
+                boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                minWidth: "320px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "16px",
+                  marginBottom: "24px",
+                  color: colors.lightGreen,
+                }}
+              >
+                {category.icon}
+                <h4
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 500,
+                    color: colors.darkGreen,
+                    margin: 0,
+                    fontFamily: "var(--font-shippori), serif",
+                    wordBreak: "keep-all",
+                  }}
+                >
+                  {category.title}
+                </h4>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                {category.items.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    style={{
+                      paddingBottom: itemIndex < category.items.length - 1 ? "16px" : 0,
+                      borderBottom: itemIndex < category.items.length - 1 ? "1px solid rgba(0,0,0,0.06)" : "none",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "16px",
+                        color: colors.text,
+                        lineHeight: 1.6,
+                        marginBottom: "6px",
+                        wordBreak: "keep-all",
+                        overflowWrap: "break-word",
+                      }}
+                    >
+                      {item.desc}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: 500,
+                        color: colors.darkGreen,
+                        textAlign: "right",
+                        wordBreak: "keep-all",
+                      }}
+                    >
+                      {item.price}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {category.note && (
+                <p
+                  style={{
+                    fontSize: "14px",
+                    color: colors.lightText,
+                    marginTop: "16px",
+                    lineHeight: 1.6,
+                    wordBreak: "keep-all",
+                  }}
+                >
+                  {category.note}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* ごみについて */}
+        <div
+          style={{
+            backgroundColor: colors.white,
+            border: `1px solid rgba(0,0,0,0.08)`,
+            borderRadius: "12px",
+            padding: "24px 32px",
+            marginBottom: "40px",
+          }}
+        >
+          <h4
+            style={{
+              fontSize: "16px",
+              fontWeight: 500,
+              color: colors.darkGreen,
+              marginBottom: "16px",
+            }}
+          >
+            ごみについて
+          </h4>
+          <p style={{ fontSize: "16px", color: colors.text, margin: "0 0 8px 0", lineHeight: 1.8 }}>
+            お客様の家庭ゴミとして出す場合：<strong>無料</strong>（袋はお客様側でご用意）
+          </p>
+          <p style={{ fontSize: "14px", color: colors.lightText, margin: 0, lineHeight: 1.8 }}>
+            ※不用品回収・処分（持ち帰り処分）は許可が必要なため対応しておりません。
+          </p>
+        </div>
+
+        {/* 最下部注記 */}
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "14px",
+            color: colors.lightText,
+            lineHeight: 1.8,
+          }}
+        >
+          表示料金は目安です。作業内容・量・難易度により変動する場合があります。<br />
+          作業前に必ずご説明し、ご同意のうえ作業します。
+        </p>
       </AnimatedSection>
     </section>
   );
@@ -1281,10 +1585,11 @@ function Pricing() {
 // ===== Process =====
 function Process() {
   const steps = [
-    { num: "01", title: "電話相談", desc: "まずはお電話ください" },
-    { num: "02", title: "概算案内", desc: "おおよその金額をお伝え" },
-    { num: "03", title: "金額説明・作業", desc: "現地で説明後、作業開始" },
-    { num: "04", title: "完了", desc: "確認・お支払い" },
+    { num: "01", title: "電話／SMSでご相談", desc: "まずはお気軽に" },
+    { num: "02", title: "内容確認", desc: "ご要望をお聞きします" },
+    { num: "03", title: "料金提示", desc: "目安をお伝えします" },
+    { num: "04", title: "ご同意", desc: "ご納得いただいてから" },
+    { num: "05", title: "作業開始", desc: "現地でお手伝い" },
   ];
 
   // 点線矢印SVG
@@ -1292,11 +1597,11 @@ function Process() {
     <svg
       viewBox="0 0 60 20"
       style={{
-        width: "50px",
+        width: "40px",
         height: "16px",
         position: "absolute",
         top: "40px",
-        right: "-25px",
+        right: "-20px",
         opacity: 0.4,
       }}
       className="process-arrow"
@@ -1317,14 +1622,14 @@ function Process() {
     <section style={{ backgroundColor: colors.cream, padding: "140px 24px", position: "relative" }}>
       <div id="process" style={{ position: "absolute", top: "-100px" }} />
 
-      <AnimatedSection style={{ maxWidth: "1000px", margin: "0 auto" }}>
+      <AnimatedSection style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <SectionTitle en="FLOW" ja="ご利用の流れ" />
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "24px",
+            gridTemplateColumns: "repeat(5, 1fr)",
+            gap: "16px",
             position: "relative",
           }}
           className="process-grid"
@@ -1343,19 +1648,19 @@ function Process() {
               {/* 番号 */}
               <div
                 style={{
-                  width: "80px",
-                  height: "80px",
+                  width: "72px",
+                  height: "72px",
                   borderRadius: "50%",
                   backgroundColor: "rgba(196, 169, 98, 0.15)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  margin: "0 auto 28px",
+                  margin: "0 auto 24px",
                 }}
               >
                 <span
                   style={{
-                    fontSize: "28px",
+                    fontSize: "24px",
                     fontWeight: 500,
                     color: colors.darkGreen,
                     fontFamily: "var(--font-shippori), serif",
@@ -1366,10 +1671,10 @@ function Process() {
               </div>
               <h3
                 style={{
-                  fontSize: "20px",
+                  fontSize: "18px",
                   fontWeight: 500,
                   color: colors.darkGreen,
-                  marginBottom: "12px",
+                  marginBottom: "10px",
                   fontFamily: "var(--font-shippori), serif",
                   letterSpacing: "1px",
                 }}
@@ -1381,7 +1686,7 @@ function Process() {
                   fontSize: "16px",
                   color: colors.lightText,
                   margin: 0,
-                  lineHeight: 1.9,
+                  lineHeight: 1.8,
                   letterSpacing: "0.5px",
                 }}
               >
@@ -1393,32 +1698,27 @@ function Process() {
       </AnimatedSection>
 
       <style>{`
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
           .process-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-            gap: 48px 24px !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 40px 16px !important;
           }
           .process-arrow {
             display: none !important;
           }
         }
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
+          .process-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 400px) {
           .process-grid {
             grid-template-columns: 1fr !important;
           }
         }
       `}</style>
     </section>
-  );
-}
-
-// ===== 写真バナー（住まい） =====
-function HomeBanner() {
-  return (
-    <PhotoBanner
-      src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1600&q=80"
-      alt="明るいキッチン・住まいイメージ"
-    />
   );
 }
 
@@ -1433,8 +1733,9 @@ function AreaHours() {
         </svg>
       ),
       title: "対応エリア",
-      main: "東久留米・小平市内",
-      sub: "（出張費1,000円）",
+      main: <>東久留米市・小平市<br />西東京市</>,
+      sub: "（近隣は応相談）",
+      link: null,
     },
     {
       icon: (
@@ -1446,6 +1747,7 @@ function AreaHours() {
       title: "受付時間",
       main: "9:00〜18:00",
       sub: null,
+      link: null,
     },
     {
       icon: (
@@ -1459,74 +1761,237 @@ function AreaHours() {
       title: "作業日",
       main: "主に金・土・日",
       sub: "（予約制）",
+      link: null,
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: "28px", height: "28px" }}>
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+          <circle cx="9" cy="10" r="1" fill="currentColor" />
+          <circle cx="12" cy="10" r="1" fill="currentColor" />
+          <circle cx="15" cy="10" r="1" fill="currentColor" />
+        </svg>
+      ),
+      title: "LINE相談",
+      main: "LINEで相談する",
+      sub: "（お気軽にどうぞ）",
+      link: "https://lin.ee/0YYiaRw",
     },
   ];
 
   return (
     <section style={{ backgroundColor: colors.white, padding: "140px 24px" }}>
-      <AnimatedSection style={{ maxWidth: "900px", margin: "0 auto" }}>
+      <AnimatedSection style={{ maxWidth: "1000px", margin: "0 auto" }}>
         <SectionTitle en="INFORMATION" ja="対応エリア・受付時間" />
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(4, 1fr)",
             gap: "24px",
           }}
+          className="info-grid"
         >
-          {items.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: colors.white,
-                padding: "56px 40px",
-                borderRadius: "20px",
-                textAlign: "center",
-                boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
-                border: "1px solid rgba(0,0,0,0.04)",
-              }}
-            >
-              <div
-                style={{
-                  width: "56px",
-                  height: "56px",
-                  margin: "0 auto 28px",
-                  color: colors.lightGreen,
-                }}
-              >
-                {item.icon}
-              </div>
-              <h3
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  color: "rgba(180, 160, 120, 0.8)",
-                  marginBottom: "16px",
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {item.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "clamp(22px, 4vw, 28px)",
-                  fontWeight: 500,
-                  color: colors.darkGreen,
-                  margin: 0,
-                  fontFamily: "var(--font-shippori), serif",
-                  letterSpacing: "1px",
-                }}
-              >
-                {item.main}
-              </p>
-              {item.sub && (
-                <p style={{ fontSize: "15px", color: colors.lightText, marginTop: "14px", lineHeight: 1.8 }}>
-                  {item.sub}
+          {items.map((item, index) => {
+            const cardContent = (
+              <>
+                <div
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    margin: "0 auto 24px",
+                    color: item.link ? "#06C755" : colors.lightGreen,
+                  }}
+                >
+                  {item.icon}
+                </div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 500,
+                    color: "rgba(180, 160, 120, 0.8)",
+                    marginBottom: "14px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "clamp(18px, 3vw, 22px)",
+                    fontWeight: 500,
+                    color: item.link ? "#06C755" : colors.darkGreen,
+                    margin: 0,
+                    fontFamily: "var(--font-shippori), serif",
+                    letterSpacing: "1px",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {item.main}
                 </p>
-              )}
-            </div>
-          ))}
+                {item.sub && (
+                  <p style={{ fontSize: "15px", color: colors.lightText, marginTop: "12px", lineHeight: 1.8 }}>
+                    {item.sub}
+                  </p>
+                )}
+              </>
+            );
+
+            if (item.link) {
+              return (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    backgroundColor: colors.white,
+                    padding: "48px 24px",
+                    borderRadius: "20px",
+                    textAlign: "center",
+                    boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                    border: "2px solid #06C755",
+                    textDecoration: "none",
+                    display: "block",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(6, 199, 85, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 1px 4px rgba(0,0,0,0.04)";
+                  }}
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: colors.white,
+                  padding: "48px 24px",
+                  borderRadius: "20px",
+                  textAlign: "center",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  border: "1px solid rgba(0,0,0,0.04)",
+                }}
+              >
+                {cardContent}
+              </div>
+            );
+          })}
+        </div>
+      </AnimatedSection>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .info-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        @media (max-width: 500px) {
+          .info-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </section>
+  );
+}
+
+// ===== NotAccepted（お受けできない内容） =====
+function NotAccepted() {
+  const items = [
+    "電気工事（配線作業、スイッチ／コンセント交換、分電盤等）",
+    "高所危険作業（屋根・2階外側など）",
+    "重量物の単独運搬（冷蔵庫・洗濯機・金庫等）",
+    "不用品回収・処分（許可が必要なため）",
+    "水回り分解修理、害虫駆除、感染リスクの高い作業",
+  ];
+
+  return (
+    <section
+      style={{
+        backgroundColor: colors.warningBg,
+        padding: "100px 24px",
+        position: "relative",
+      }}
+    >
+      <AnimatedSection style={{ maxWidth: "700px", margin: "0 auto" }}>
+        <SectionTitle en="NOTICE" ja="安全・法令遵守のため、お受けできない内容" />
+
+        <div
+          style={{
+            backgroundColor: colors.white,
+            borderRadius: "16px",
+            padding: "40px",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "16px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "28px",
+                    height: "28px",
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(199, 80, 80, 0.1)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    marginTop: "2px",
+                  }}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke={colors.warningRed}
+                    strokeWidth="2"
+                    style={{ width: "14px", height: "14px" }}
+                  >
+                    <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "16px",
+                    color: colors.text,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <p
+            style={{
+              fontSize: "14px",
+              color: colors.lightText,
+              marginTop: "32px",
+              paddingTop: "24px",
+              borderTop: "1px solid rgba(0,0,0,0.06)",
+              lineHeight: 1.8,
+            }}
+          >
+            ※内容により専門業者をご案内する場合があります。
+          </p>
         </div>
       </AnimatedSection>
     </section>
@@ -1539,24 +2004,44 @@ function FAQ() {
 
   const faqs = [
     {
-      q: "相談だけでも大丈夫ですか？",
-      a: "はい、もちろん大丈夫です。まずはお気軽にお電話ください。ご相談だけでも喜んで対応いたします。",
+      q: "どんなことをお願いできますか？",
+      a: "電球交換、家具の移動、片付け（軽作業）、草取り・簡単な庭掃除、買い物代行など、日常の「ちょっと困った」軽作業に出張で対応します。",
     },
     {
-      q: "料金はいつ確定しますか？",
-      a: "現地で作業内容を確認し、作業前に金額をご説明いたします。ご納得いただいてから作業を開始しますのでご安心ください。",
+      q: "介護保険外（制度外）のお手伝いとは何ですか？",
+      a: "介護保険のサービスでは対応が難しい軽作業を、有償でお手伝いするものです。作業前に内容と料金をご説明し、ご同意をいただいてから作業します。",
     },
     {
-      q: "電話でうまく説明できないのですが...",
-      a: "大丈夫です。お電話で概要をお聞きし、詳しくは現地で確認させていただきます。うまく説明できなくてもお気軽にご連絡ください。",
+      q: "対応エリアはどこですか？",
+      a: "東久留米市・小平市・西東京市を中心に対応しています（近隣は応相談）。",
     },
     {
-      q: "小さな作業でも頼めますか？",
-      a: "はい、電球1個の交換など、小さな作業でも喜んでお受けいたします。「こんなことでも頼めるかな？」と思ったら、まずはご相談ください。",
+      q: "料金はどのように決まりますか？",
+      a: "出張費と作業時間を基本に算出します。作業前に必ず金額を提示し、ご同意をいただいてから開始します。追加作業が必要な場合も都度確認します。",
     },
     {
-      q: "対応できない作業はありますか？",
-      a: "専門資格が必要な電気工事、ガス工事、水道工事などはお受けできません。また、内容によっては対応できない場合がございます。まずはご相談ください。",
+      q: "最低料金はありますか？",
+      a: "はい。出張費込みで4,500円（税込）が最低料金です。",
+    },
+    {
+      q: "見積は無料ですか？",
+      a: "内容が軽作業の範囲であれば、電話/SMSで目安をご案内できます。現地確認が必要な場合は事前にお伝えします。",
+    },
+    {
+      q: "当日すぐ来てもらえますか？",
+      a: "可能な範囲で調整しますが、基本は予約制です。まずはご希望日時をお知らせください。",
+    },
+    {
+      q: "支払い方法は？",
+      a: "現金／銀行振込に対応しています。領収書も発行します。",
+    },
+    {
+      q: "キャンセル料はかかりますか？",
+      a: "体調不良など事情がある場合は柔軟に対応します。分かった時点でご連絡ください。",
+    },
+    {
+      q: "お受けできない作業はありますか？",
+      a: "安全・法令遵守のため、電気工事、高所危険作業、重量物の単独運搬、不用品回収・処分、水回り分解修理などはお受けできません。",
     },
   ];
 
@@ -1568,7 +2053,7 @@ function FAQ() {
       <AnimatedSection style={{ maxWidth: "750px", margin: "0 auto" }}>
         <SectionTitle en="FAQ" ja="よくある質問" />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -1583,14 +2068,14 @@ function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 style={{
                   width: "100%",
-                  padding: "28px 32px",
+                  padding: "24px 28px",
                   display: "flex",
                   alignItems: "center",
                   backgroundColor: "transparent",
                   border: "none",
                   cursor: "pointer",
                   textAlign: "left",
-                  gap: "20px",
+                  gap: "16px",
                 }}
               >
                 {/* Qバッジ */}
@@ -1611,7 +2096,7 @@ function FAQ() {
                 <span
                   style={{
                     flex: 1,
-                    fontSize: "18px",
+                    fontSize: "17px",
                     fontWeight: 500,
                     color: colors.darkGreen,
                     lineHeight: 1.7,
@@ -1646,9 +2131,9 @@ function FAQ() {
               >
                 <div
                   style={{
-                    padding: "0 32px 28px 84px",
+                    padding: "0 28px 24px 76px",
                     display: "flex",
-                    gap: "20px",
+                    gap: "16px",
                   }}
                 >
                   {/* Aバッジ */}
@@ -1670,7 +2155,7 @@ function FAQ() {
                     style={{
                       fontSize: "16px",
                       color: colors.text,
-                      lineHeight: 2,
+                      lineHeight: 1.9,
                       margin: 0,
                       letterSpacing: "0.5px",
                     }}
@@ -1687,7 +2172,7 @@ function FAQ() {
   );
 }
 
-// ===== CTA（明るいクリーム背景バージョン） =====
+// ===== CTA =====
 function CTA() {
   return (
     <section
@@ -1760,14 +2245,17 @@ function CTA() {
           <br />
           ご相談ください
         </h2>
-        <p style={{ fontSize: "18px", marginBottom: "48px", color: colors.lightText, lineHeight: 2, letterSpacing: "0.5px" }}>
+        <p style={{ fontSize: "18px", marginBottom: "20px", color: colors.lightText, lineHeight: 2, letterSpacing: "0.5px" }}>
           お見積りは無料です。
           <br />
           ご相談だけでもお気軽にどうぞ。
         </p>
+        <p style={{ fontSize: "16px", marginBottom: "40px", color: colors.text, lineHeight: 1.8 }}>
+          お電話またはSMS（ショートメッセージ）で<br />お気軽にご相談ください。
+        </p>
 
         <a
-          href="tel:070-2493-5340"
+          href="tel:050-1784-1171"
           style={{
             display: "inline-block",
             fontSize: "clamp(32px, 7vw, 48px)",
@@ -1779,12 +2267,12 @@ function CTA() {
             marginBottom: "36px",
           }}
         >
-          070-2493-5340
+          050-1784-1171
         </a>
 
         <div>
           <a
-            href="tel:070-2493-5340"
+            href="tel:050-1784-1171"
             style={{
               display: "inline-block",
               backgroundColor: colors.amber,
@@ -1801,8 +2289,37 @@ function CTA() {
           </a>
         </div>
 
+        <div style={{ marginTop: "32px" }}>
+          <p style={{ fontSize: "16px", color: colors.text, marginBottom: "16px" }}>
+            LINEでもご相談いただけます
+          </p>
+          <a
+            href="https://lin.ee/0YYiaRw"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "12px",
+              backgroundColor: "#06C755",
+              color: colors.white,
+              padding: "18px 40px",
+              borderRadius: "50px",
+              fontSize: "18px",
+              fontWeight: 600,
+              textDecoration: "none",
+              boxShadow: "0 4px 20px rgba(6, 199, 85, 0.25)",
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "22px", height: "22px" }}>
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+            </svg>
+            LINEで相談する
+          </a>
+        </div>
+
         <p style={{ fontSize: "16px", color: colors.lightText, marginTop: "36px", letterSpacing: "1px", lineHeight: 1.8 }}>
-          受付 9:00〜18:00 ／ 主に金・土・日
+          受付 9:00〜18:00 ／ 主に金・土・日（予約制）
         </p>
       </AnimatedSection>
     </section>
@@ -1841,10 +2358,10 @@ function Footer() {
           くるめ生活サポート
         </h3>
         <p style={{ fontSize: "15px", opacity: 0.6, marginBottom: "12px", lineHeight: 1.8, letterSpacing: "1px" }}>
-          東久留米・小平エリアの便利屋サービス
+          東久留米市・小平市・西東京市エリアの<br />便利屋サービス
         </p>
-        <p style={{ fontSize: "15px", opacity: 0.6, marginBottom: "48px", letterSpacing: "1px" }}>
-          電話: 070-2493-5340 ／ 受付: 9:00〜18:00
+        <p style={{ fontSize: "15px", opacity: 0.6, marginBottom: "32px", letterSpacing: "1px" }}>
+          電話: 050-1784-1171 ／ 受付: 9:00〜18:00
         </p>
 
         <div
@@ -1852,7 +2369,7 @@ function Footer() {
             display: "flex",
             justifyContent: "center",
             gap: "40px",
-            marginBottom: "48px",
+            marginBottom: "32px",
             flexWrap: "wrap",
           }}
         >
@@ -1877,6 +2394,19 @@ function Footer() {
             </a>
           ))}
         </div>
+
+        {/* 個人情報の取り扱い */}
+        <p
+          style={{
+            fontSize: "13px",
+            opacity: 0.4,
+            lineHeight: 1.8,
+            marginBottom: "32px",
+            padding: "0 16px",
+          }}
+        >
+          個人情報の取り扱い：ご相談・作業対応に必要な範囲で個人情報を取り扱い、目的外での使用はいたしません。
+        </p>
 
         <div
           style={{
@@ -1905,6 +2435,7 @@ export default function Home() {
       <Pricing />
       <Process />
       <AreaHours />
+      <NotAccepted />
       <FAQ />
       <CTA />
       <Footer />
