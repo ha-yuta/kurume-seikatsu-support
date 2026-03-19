@@ -114,6 +114,18 @@ export default function Hero() {
               textAlign: "center",
             }}
           >
+            <p
+              style={{
+                fontSize: "16px",
+                color: "rgba(90, 143, 60, 0.7)",
+                letterSpacing: "4px",
+                fontWeight: 500,
+                margin: "0 0 12px 0",
+                whiteSpace: "nowrap",
+              }}
+            >
+              東久留米市のご近所の便利屋
+            </p>
             <h1
               style={{
                 fontSize: "clamp(22px, 4.5vw, 38px)",
