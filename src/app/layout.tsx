@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Zen_Maru_Gothic, Shippori_Mincho_B1 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-8SJTH4V70Z";
 
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: ["400", "500", "700"],
@@ -49,6 +52,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </head>
       <body
         style={{
           margin: 0,
