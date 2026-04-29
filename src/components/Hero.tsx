@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { colors, PHONE_NUMBER, PHONE_TEL_LINK, LINE_URL } from "@/lib/constants";
 import {
   CentralDottedCircle,
@@ -295,12 +296,21 @@ export default function Hero() {
           <div
             key={index}
             style={{
+              position: "relative",
               aspectRatio: "4/3",
-              backgroundImage: `url(${photo})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              overflow: "hidden",
             }}
-          />
+          >
+            <Image
+              src={photo}
+              alt={`サービスイメージ ${index + 1}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              style={{ objectFit: "cover" }}
+              priority={index === 0}
+              loading={index === 0 ? undefined : "lazy"}
+            />
+          </div>
         ))}
       </div>
 

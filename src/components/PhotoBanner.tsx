@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface PhotoBannerProps {
   src: string;
   alt: string;
@@ -10,13 +12,18 @@ export default function PhotoBanner({ src, alt }: PhotoBannerProps) {
     <div
       style={{
         height: "300px",
-        backgroundImage: `url(${src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
         position: "relative",
+        overflow: "hidden",
       }}
-      aria-label={alt}
     >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="100vw"
+        style={{ objectFit: "cover" }}
+        loading="lazy"
+      />
       <div
         style={{
           position: "absolute",
