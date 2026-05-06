@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_next/static/
 
 Sitemap: https://kurume-support.com/sitemap.xml
