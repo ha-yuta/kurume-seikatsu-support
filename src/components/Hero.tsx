@@ -125,7 +125,7 @@ export default function Hero() {
                 whiteSpace: "nowrap",
               }}
             >
-              東久留米市のご近所の便利屋
+              東京都東久留米市のご近所の便利屋
             </p>
             <h1
               style={{
@@ -199,7 +199,7 @@ export default function Hero() {
             lineHeight: 1.8,
           }}
         >
-          東久留米市・小平市・西東京市
+          東京都 東久留米市・小平市・西東京市
         </p>
       </div>
 

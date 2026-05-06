@@ -33,7 +33,7 @@ export default function Footer() {
           くるめ生活サポート
         </h3>
         <p style={{ fontSize: "15px", opacity: 0.6, marginBottom: "12px", lineHeight: 1.8, letterSpacing: "1px" }}>
-          東久留米市・小平市・西東京市エリアの<br />便利屋サービス
+          東京都 東久留米市・小平市・西東京市エリアの<br />便利屋サービス
         </p>
         <p style={{ fontSize: "15px", opacity: 0.6, marginBottom: "32px", letterSpacing: "1px" }}>
           電話: {PHONE_NUMBER} ／ 受付: 9:00〜18:00
