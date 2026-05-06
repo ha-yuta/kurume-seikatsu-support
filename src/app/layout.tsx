@@ -18,6 +18,10 @@ const shipporiMincho = Shippori_Mincho_B1({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kurume-support.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "くるめ生活サポート｜介護保険外の便利屋（東久留米・小平・西東京）",
   description:
     "電球交換、家具移動、片付け、草取り、買い物代行など介護保険外の暮らしの困りごとをサポート。見積無料／作業前に料金説明し同意後に作業。受付9:00〜18:00、主に金土日（予約制）。電話070-2493-5340",
