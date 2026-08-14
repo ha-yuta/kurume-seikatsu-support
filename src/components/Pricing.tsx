@@ -7,9 +7,9 @@ import { SectionDottedCircle } from "./Decorations";
 
 export default function Pricing() {
   const priceItems = [
-    { label: "出張費", price: "1,000", unit: "円", note: "東久留米・小平・西東京市内" },
-    { label: "作業費（1時間）", price: "3,500", unit: "円", note: "" },
-    { label: "延長（30分）", price: "1,500", unit: "円", note: "" },
+    { label: "訪問サポート（1時間）", price: "5,500", unit: "円", note: "税込・基本訪問料込み／東久留米・小平・西東京市内" },
+    { label: "延長（30分）", price: "2,000", unit: "円", note: "" },
+    { label: "延長（1時間）", price: "4,000", unit: "円", note: "" },
   ];
 
   const exampleCategories = [
@@ -23,12 +23,12 @@ export default function Pricing() {
         </svg>
       ),
       items: [
-        { desc: "スポット草取り（通路・ブロック際など／〜1時間）", price: "4,500円" },
-        { desc: "草取り（少なめ／〜1.5時間）", price: "6,000円" },
-        { desc: "草取り（多め／〜2時間）", price: "7,500円" },
-        { desc: "庭全体など量が多い場合", price: "現地見積（目安 9,000円〜）" },
+        { desc: "スポット草取り（通路・ブロック際など／〜1時間）", price: "5,500円" },
+        { desc: "草取り（少なめ／〜1.5時間）", price: "7,500円" },
+        { desc: "草取り（多め／〜2時間）", price: "9,500円" },
+        { desc: "庭全体など量が多い場合", price: "現地見積（目安 9,500円〜）" },
       ],
-      note: null,
+      note: "※訪問サポートの時間制料金（1時間5,500円・延長30分2,000円）を基本に算出しています。",
     },
     {
       title: "簡易剪定（低木・生け垣）",
@@ -53,11 +53,11 @@ export default function Pricing() {
         </svg>
       ),
       items: [
-        { desc: "〜1時間", price: "4,500円" },
-        { desc: "〜1.5時間", price: "6,000円" },
-        { desc: "〜2時間", price: "7,500円" },
+        { desc: "〜1時間", price: "5,500円" },
+        { desc: "〜1.5時間", price: "7,500円" },
+        { desc: "〜2時間", price: "9,500円" },
       ],
-      note: null,
+      note: "※訪問サポートの時間制料金と同額です。",
     },
   ];
 
@@ -189,12 +189,12 @@ export default function Pricing() {
                 lineHeight: 1,
               }}
             >
-              4,500
+              5,500
             </span>
             <span style={{ fontSize: "20px", color: colors.darkGreen, fontWeight: 500 }}>円（税込）</span>
           </div>
           <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "16px", lineHeight: 1.8 }}>
-            出張費＋作業1時間相当
+            訪問サポート1時間相当
           </div>
         </div>
 
