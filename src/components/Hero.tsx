@@ -15,9 +15,9 @@ export default function Hero() {
   const softGold = "rgba(196, 169, 98, 0.5)";
 
   const photos = [
-    "/images/IMG_5878.webp",
-    "/images/IMG_5876.webp",
-    "/images/IMG_5888.webp",
+    { src: "/images/hero-kitchen-cabinet.webp", alt: "食器棚・レンジ台の作業事例", objectPosition: "60% 65%" },
+    { src: "/images/hero-bed.webp", alt: "ベッド組み立ての作業事例", objectPosition: "50% 45%" },
+    { src: "/images/hero-storage-rack-v2.webp", alt: "突っ張り収納棚の作業事例", objectPosition: "50% 30%" },
   ];
 
   return (
@@ -302,11 +302,11 @@ export default function Hero() {
             }}
           >
             <Image
-              src={photo}
-              alt={`サービスイメージ ${index + 1}`}
+              src={photo.src}
+              alt={photo.alt}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: photo.objectPosition }}
               priority={index === 0}
               loading={index === 0 ? undefined : "lazy"}
             />
