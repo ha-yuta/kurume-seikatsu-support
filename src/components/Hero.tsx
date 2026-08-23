@@ -15,9 +15,9 @@ export default function Hero() {
   const softGold = "rgba(196, 169, 98, 0.5)";
 
   const photos = [
-    { src: "/images/hero-kitchen-cabinet.webp", alt: "食器棚・レンジ台の作業事例", objectPosition: "60% 65%" },
-    { src: "/images/hero-bed.webp", alt: "ベッド組み立ての作業事例", objectPosition: "50% 45%" },
     { src: "/images/hero-storage-rack-v2.webp", alt: "突っ張り収納棚の作業事例", objectPosition: "50% 30%" },
+    { src: "/images/hero-kitchen-cabinet-v2.webp", alt: "キッチン収納の作業事例", objectPosition: "50% 40%" },
+    { src: "/images/hero-bed.webp", alt: "ベッド組み立ての作業事例", objectPosition: "50% 45%" },
   ];
 
   return (

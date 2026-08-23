@@ -14,8 +14,8 @@ export default function AreaHours() {
         </svg>
       ),
       title: "対応エリア",
-      main: <>東久留米市・小平市<br />西東京市</>,
-      sub: "（近隣は応相談）",
+      main: <>東京都・埼玉県<br />13市区</>,
+      sub: "（詳細は料金欄をご確認ください）",
       link: null,
     },
     {

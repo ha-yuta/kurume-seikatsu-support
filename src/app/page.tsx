@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import TrustBadges from "@/components/TrustBadges";
 import Problems from "@/components/Problems";
 import Services from "@/components/Services";
+import OperatorProfile from "@/components/OperatorProfile";
+import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Process from "@/components/Process";
 import AreaHours from "@/components/AreaHours";
@@ -19,6 +21,8 @@ export default function Home() {
       <TrustBadges />
       <Problems />
       <Services />
+      <OperatorProfile />
+      <Testimonials />
       <Pricing />
       <Process />
       <AreaHours />

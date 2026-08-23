@@ -20,6 +20,8 @@ export { default as Hero } from "./Hero";
 export { default as TrustBadges } from "./TrustBadges";
 export { default as Problems } from "./Problems";
 export { default as Services } from "./Services";
+export { default as OperatorProfile } from "./OperatorProfile";
+export { default as Testimonials } from "./Testimonials";
 export { default as Pricing } from "./Pricing";
 export { default as Process } from "./Process";
 export { default as AreaHours } from "./AreaHours";

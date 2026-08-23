@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { colors, PHONE_NUMBER, PHONE_TEL_LINK, LINE_URL } from "@/lib/constants";
 
 export default function Header() {
@@ -53,6 +54,9 @@ export default function Header() {
           <a
             href="#"
             style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
               fontSize: "18px",
               fontWeight: 500,
               color: colors.darkGreen,
@@ -61,6 +65,13 @@ export default function Header() {
               letterSpacing: "2px",
             }}
           >
+            <Image
+              src="/images/logo.webp"
+              alt="くるめ生活サポート"
+              width={36}
+              height={36}
+              style={{ borderRadius: "6px" }}
+            />
             くるめ生活サポート
           </a>
 

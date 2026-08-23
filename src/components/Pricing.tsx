@@ -6,58 +6,31 @@ import SectionTitle from "./SectionTitle";
 import { SectionDottedCircle } from "./Decorations";
 
 export default function Pricing() {
-  const priceItems = [
-    { label: "訪問サポート（1時間）", price: "5,500", unit: "円", note: "税込・基本訪問料込み／東久留米・小平・西東京市内" },
-    { label: "延長（30分）", price: "2,000", unit: "円", note: "" },
-    { label: "延長（1時間）", price: "4,000", unit: "円", note: "" },
+  const extensionItems = [
+    { label: "延長 30分", price: "2,000", unit: "円" },
+    { label: "延長 1時間", price: "4,000", unit: "円" },
   ];
 
-  const exampleCategories = [
+  const quoteExamples = [
+    "大型家具の移動・設置",
+    "ベッド等の組立作業",
+    "草むしり（作業量・範囲による）",
+    "引っ越しの手伝い",
+    "大掃除・片付け",
+    "庭木の剪定",
+    "網戸の張替え",
+    "など",
+  ];
+
+  const freeAreas = [
     {
-      title: "草取り・庭まわり",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
-          <path d="M12 22c-4-2-7-6-7-10 0-3 2-6 5-7 2 3 2 6 2 9" />
-          <path d="M12 22c4-2 7-6 7-10 0-3-2-6-5-7-2 3-2 6-2 9" />
-          <path d="M12 22V8" />
-        </svg>
-      ),
-      items: [
-        { desc: "スポット草取り（通路・ブロック際など／〜1時間）", price: "5,500円" },
-        { desc: "草取り（少なめ／〜1.5時間）", price: "7,500円" },
-        { desc: "草取り（多め／〜2時間）", price: "9,500円" },
-        { desc: "庭全体など量が多い場合", price: "現地見積（目安 9,500円〜）" },
-      ],
-      note: "※訪問サポートの時間制料金（1時間5,500円・延長30分2,000円）を基本に算出しています。",
+      pref: "東京都",
+      cities:
+        "東久留米市・練馬区・西東京市・小平市・東大和市・清瀬市・府中市・東村山市・三鷹市・武蔵野市・調布市・国分寺市",
     },
     {
-      title: "簡易剪定（低木・生け垣）",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
-          <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-        </svg>
-      ),
-      items: [
-        { desc: "お試し剪定（〜1時間）", price: "6,000円" },
-        { desc: "しっかり剪定（〜2時間）", price: "9,000円" },
-        { desc: "量が多い場合", price: "現地見積（目安 12,000円〜）" },
-      ],
-      note: "※安全のため、脚立で安全に届く範囲（目安〜2m）の簡易剪定に限ります。",
-    },
-    {
-      title: "片付け・家具移動（軽作業）",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "32px", height: "32px" }}>
-          <rect x="3" y="8" width="18" height="10" rx="1" />
-          <path d="M5 8V6a2 2 0 012-2h10a2 2 0 012 2v2M7 18v2M17 18v2" />
-        </svg>
-      ),
-      items: [
-        { desc: "〜1時間", price: "5,500円" },
-        { desc: "〜1.5時間", price: "7,500円" },
-        { desc: "〜2時間", price: "9,500円" },
-      ],
-      note: "※訪問サポートの時間制料金と同額です。",
+      pref: "埼玉県",
+      cities: "所沢市・新座市",
     },
   ];
 
@@ -103,81 +76,18 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* 基本料金テーブル */}
-        <div
-          style={{
-            backgroundColor: colors.cream,
-            borderRadius: "16px",
-            padding: "8px 0",
-            marginBottom: "24px",
-          }}
-        >
-          {priceItems.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "32px 40px",
-                borderBottom: index < priceItems.length - 1 ? `1px solid rgba(0,0,0,0.06)` : "none",
-                flexWrap: "wrap",
-                gap: "12px",
-              }}
-            >
-              <div>
-                <span
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: 500,
-                    color: colors.darkGreen,
-                  }}
-                >
-                  {item.label}
-                </span>
-                {item.note && (
-                  <span
-                    style={{
-                      fontSize: "14px",
-                      color: colors.lightText,
-                      marginLeft: "12px",
-                    }}
-                  >
-                    {item.note}
-                  </span>
-                )}
-              </div>
-              <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
-                <span
-                  style={{
-                    fontSize: "clamp(28px, 5vw, 36px)",
-                    fontWeight: 500,
-                    color: colors.darkGreen,
-                    fontFamily: "var(--font-shippori), serif",
-                  }}
-                >
-                  {item.price}
-                </span>
-                <span style={{ fontSize: "16px", color: colors.text }}>
-                  {item.unit}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* 最低料金 */}
+        {/* メイン価格カード */}
         <div
           style={{
             backgroundColor: "rgba(90, 143, 60, 0.08)",
-            padding: "40px",
+            padding: "48px 40px",
             borderRadius: "16px",
             textAlign: "center",
             marginBottom: "24px",
           }}
         >
-          <div style={{ fontSize: "16px", color: colors.lightText, marginBottom: "16px", letterSpacing: "2px" }}>
-            最低料金
+          <div style={{ fontSize: "18px", color: colors.darkGreen, fontWeight: 500, marginBottom: "16px", letterSpacing: "1px" }}>
+            訪問サポート 1時間
           </div>
           <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "6px" }}>
             <span
@@ -193,9 +103,52 @@ export default function Pricing() {
             </span>
             <span style={{ fontSize: "20px", color: colors.darkGreen, fontWeight: 500 }}>円（税込）</span>
           </div>
-          <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "16px", lineHeight: 1.8 }}>
-            訪問サポート1時間相当
+          <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "20px", lineHeight: 1.8 }}>
+            ＝ 訪問＋1時間までの軽作業
           </div>
+          <div style={{ fontSize: "15px", color: colors.text, marginTop: "16px", lineHeight: 1.8 }}>
+            例：電球交換、カーテン取付、家具の簡単な移動、<br />
+            ちょっとした取付、軽い片付け など
+          </div>
+        </div>
+
+        {/* 延長料金 */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "16px",
+            marginBottom: "24px",
+          }}
+        >
+          {extensionItems.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: colors.cream,
+                borderRadius: "16px",
+                padding: "28px 24px",
+                textAlign: "center",
+              }}
+            >
+              <div style={{ fontSize: "15px", color: colors.lightText, marginBottom: "12px", letterSpacing: "1px" }}>
+                {item.label}
+              </div>
+              <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "4px" }}>
+                <span
+                  style={{
+                    fontSize: "clamp(26px, 5vw, 32px)",
+                    fontWeight: 500,
+                    color: colors.darkGreen,
+                    fontFamily: "var(--font-shippori), serif",
+                  }}
+                >
+                  {item.price}
+                </span>
+                <span style={{ fontSize: "16px", color: colors.text }}>{item.unit}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* 補足 */}
@@ -204,7 +157,7 @@ export default function Pricing() {
             textAlign: "center",
             fontSize: "16px",
             color: colors.text,
-            marginBottom: "80px",
+            marginBottom: "40px",
             lineHeight: 1.8,
             backgroundColor: colors.cream,
             padding: "20px 24px",
@@ -214,140 +167,91 @@ export default function Pricing() {
           ※作業前に必ず料金を提示し、ご同意後に開始します。追加作業は都度確認します。
         </p>
 
-        {/* よくあるご依頼の料金目安 */}
-        <h3
-          style={{
-            fontSize: "clamp(22px, 4vw, 28px)",
-            fontWeight: 500,
-            color: colors.darkGreen,
-            textAlign: "center",
-            marginBottom: "48px",
-            fontFamily: "var(--font-shippori), serif",
-            letterSpacing: "2px",
-          }}
-        >
-          よくあるご依頼の料金目安
-        </h3>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "24px",
-            marginBottom: "40px",
-          }}
-        >
-          {exampleCategories.map((category, catIndex) => (
-            <div
-              key={catIndex}
-              style={{
-                backgroundColor: colors.cream,
-                borderRadius: "16px",
-                padding: "32px",
-                boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
-                minWidth: "320px",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "16px",
-                  marginBottom: "24px",
-                  color: colors.lightGreen,
-                }}
-              >
-                {category.icon}
-                <h4
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: 500,
-                    color: colors.darkGreen,
-                    margin: 0,
-                    fontFamily: "var(--font-shippori), serif",
-                    wordBreak: "keep-all",
-                  }}
-                >
-                  {category.title}
-                </h4>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {category.items.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    style={{
-                      paddingBottom: itemIndex < category.items.length - 1 ? "16px" : 0,
-                      borderBottom: itemIndex < category.items.length - 1 ? "1px solid rgba(0,0,0,0.06)" : "none",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "16px",
-                        color: colors.text,
-                        lineHeight: 1.6,
-                        marginBottom: "6px",
-                        wordBreak: "keep-all",
-                        overflowWrap: "break-word",
-                      }}
-                    >
-                      {item.desc}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "16px",
-                        fontWeight: 500,
-                        color: colors.darkGreen,
-                        textAlign: "right",
-                        wordBreak: "keep-all",
-                      }}
-                    >
-                      {item.price}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {category.note && (
-                <p
-                  style={{
-                    fontSize: "14px",
-                    color: colors.lightText,
-                    marginTop: "16px",
-                    lineHeight: 1.6,
-                    wordBreak: "keep-all",
-                  }}
-                >
-                  {category.note}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* ごみについて */}
+        {/* 別途お見積りの作業 */}
         <div
           style={{
             backgroundColor: colors.white,
             border: `1px solid rgba(0,0,0,0.08)`,
             borderRadius: "12px",
-            padding: "24px 32px",
+            padding: "32px",
             marginBottom: "40px",
           }}
         >
-          <h4
+          <h3
             style={{
-              fontSize: "16px",
+              fontSize: "18px",
               fontWeight: 500,
               color: colors.darkGreen,
-              marginBottom: "16px",
+              marginBottom: "20px",
+              fontFamily: "var(--font-shippori), serif",
+              letterSpacing: "1px",
             }}
           >
-            ごみについて
-          </h4>
-          <p style={{ fontSize: "16px", color: colors.text, margin: "0 0 8px 0", lineHeight: 1.8 }}>
-            お客様の家庭ゴミとして出す場合：<strong>無料</strong>（袋はお客様側でご用意）
+            内容に応じて別途お見積りする作業
+          </h3>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px",
+              marginBottom: "20px",
+            }}
+          >
+            {quoteExamples.map((example, index) => (
+              <span
+                key={index}
+                style={{
+                  backgroundColor: colors.cream,
+                  color: colors.text,
+                  fontSize: "14px",
+                  padding: "8px 16px",
+                  borderRadius: "20px",
+                  lineHeight: 1.6,
+                }}
+              >
+                {example}
+              </span>
+            ))}
+          </div>
+          <p style={{ fontSize: "15px", color: colors.lightText, margin: 0, lineHeight: 1.8 }}>
+            上記のような作業は内容・量に応じて別途お見積りいたします。その他の作業についても、まずはお気軽にご相談ください。
           </p>
-          <p style={{ fontSize: "14px", color: colors.lightText, margin: 0, lineHeight: 1.8 }}>
-            ※不用品回収・処分（持ち帰り処分）は許可が必要なため対応しておりません。
+        </div>
+
+        {/* 出張料無料エリア */}
+        <div
+          style={{
+            backgroundColor: "rgba(90, 143, 60, 0.08)",
+            borderRadius: "16px",
+            padding: "32px",
+            marginBottom: "40px",
+          }}
+        >
+          <h3
+            style={{
+              fontSize: "18px",
+              fontWeight: 500,
+              color: colors.darkGreen,
+              marginBottom: "20px",
+              fontFamily: "var(--font-shippori), serif",
+              letterSpacing: "1px",
+              textAlign: "center",
+            }}
+          >
+            出張料無料エリア
+          </h3>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            {freeAreas.map((area, index) => (
+              <div key={index} style={{ display: "flex", flexWrap: "wrap", gap: "8px", lineHeight: 1.8 }}>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: colors.darkGreen, whiteSpace: "nowrap" }}>
+                  {area.pref}：
+                </span>
+                <span style={{ fontSize: "15px", color: colors.text }}>{area.cities}</span>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: "14px", color: colors.lightText, marginTop: "20px", marginBottom: 0, lineHeight: 1.8, textAlign: "center" }}>
+            上記以外のエリアも対応可能な場合がございます。お気軽にご相談ください。
           </p>
         </div>
 
