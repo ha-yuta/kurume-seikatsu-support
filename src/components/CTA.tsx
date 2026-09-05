@@ -80,8 +80,8 @@ export default function CTA() {
           <br />
           ご相談だけでもお気軽にどうぞ。
         </p>
-        <p style={{ fontSize: "16px", marginBottom: "40px", color: colors.text, lineHeight: 1.8 }}>
-          お電話またはSMS（ショートメッセージ）で<br />お気軽にご相談ください。
+        <p style={{ fontSize: "16px", marginBottom: "40px", color: colors.text, lineHeight: 1.8, wordBreak: "keep-all" }}>
+          LINE・お電話・SMS（ショートメッセージ）で、お気軽にご相談ください。
         </p>
 
         <a
@@ -149,7 +149,7 @@ export default function CTA() {
         </div>
 
         <p style={{ fontSize: "16px", color: colors.lightText, marginTop: "36px", letterSpacing: "1px", lineHeight: 1.8 }}>
-          受付 9:00〜18:00 ／ 主に金・土・日（予約制）
+          受付 9:00〜18:00 ／ 主に金・土・日<span style={{ whiteSpace: "nowrap" }}>（予約制）</span>
         </p>
       </AnimatedSection>
     </section>

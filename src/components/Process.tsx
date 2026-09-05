@@ -6,7 +6,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function Process() {
   const steps = [
-    { num: "01", title: "電話／SMSでご相談", desc: "まずはお気軽に" },
+    { num: "01", title: "LINE・電話・SMSでご相談", desc: "まずはお気軽に" },
     { num: "02", title: "内容確認", desc: "ご要望をお聞きします" },
     { num: "03", title: "料金提示", desc: "目安をお伝えします" },
     { num: "04", title: "ご同意", desc: "ご納得いただいてから" },
@@ -98,6 +98,7 @@ export default function Process() {
                   marginBottom: "10px",
                   fontFamily: "var(--font-shippori), serif",
                   letterSpacing: "1px",
+                  wordBreak: "keep-all",
                 }}
               >
                 {step.title}

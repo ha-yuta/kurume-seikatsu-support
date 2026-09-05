@@ -14,7 +14,7 @@ export default function AreaHours() {
         </svg>
       ),
       title: "対応エリア",
-      main: <>東京都・埼玉県<br />13市区</>,
+      main: <>東京都・埼玉県<br />14市区</>,
       sub: "（詳細は料金欄をご確認ください）",
       link: null,
     },

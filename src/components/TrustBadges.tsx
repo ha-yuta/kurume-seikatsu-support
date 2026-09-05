@@ -39,6 +39,26 @@ export default function TrustBadges() {
         </svg>
       ),
     },
+    {
+      text: "損害賠償保険加入済み",
+      sub: "万一に備えています",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "24px", height: "24px" }}>
+          <path d="M12 2l7 3v6c0 5-3 9-7 11-4-2-7-6-7-11V5l7-3z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+      ),
+    },
+    {
+      text: "各種お支払いに対応",
+      sub: "現金・振込・PayPay・カード",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ width: "24px", height: "24px" }}>
+          <rect x="2" y="6" width="20" height="14" rx="2" />
+          <path d="M2 10h20" />
+        </svg>
+      ),
+    },
   ];
 
   return (
@@ -70,17 +90,46 @@ export default function TrustBadges() {
             }}
           >
             {badge.icon}
-            <span
-              style={{
-                fontSize: "16px",
-                fontWeight: 500,
-                color: colors.darkGreen,
-                letterSpacing: "0.5px",
-                lineHeight: 1.6,
-              }}
-            >
-              {badge.text}
-            </span>
+            {badge.sub ? (
+              <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                <span
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: colors.darkGreen,
+                    letterSpacing: "0.5px",
+                    lineHeight: 1.6,
+                    wordBreak: "keep-all",
+                  }}
+                >
+                  {badge.text}
+                </span>
+                <span
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 400,
+                    color: colors.lightText,
+                    letterSpacing: "0.3px",
+                    lineHeight: 1.5,
+                    wordBreak: "keep-all",
+                  }}
+                >
+                  {badge.sub}
+                </span>
+              </div>
+            ) : (
+              <span
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  color: colors.darkGreen,
+                  letterSpacing: "0.5px",
+                  lineHeight: 1.6,
+                }}
+              >
+                {badge.text}
+              </span>
+            )}
           </div>
         ))}
       </div>

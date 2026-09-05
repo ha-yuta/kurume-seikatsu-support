@@ -106,8 +106,11 @@ export default function Pricing() {
           <div style={{ fontSize: "16px", color: colors.lightText, marginTop: "20px", lineHeight: 1.8 }}>
             ＝ 訪問＋1時間までの軽作業
           </div>
+          <div style={{ fontSize: "15px", color: colors.text, marginTop: "12px", lineHeight: 1.8 }}>
+            1時間以内であれば、複数の軽作業を<span style={{ whiteSpace: "nowrap" }}>まとめて</span>ご相談いただけます。
+          </div>
           <div style={{ fontSize: "15px", color: colors.text, marginTop: "16px", lineHeight: 1.8 }}>
-            例：電球交換、カーテン取付、家具の簡単な移動、<br />
+            例：電球交換、カーテン取付、家具の<span style={{ whiteSpace: "nowrap" }}>簡単な移動</span>、<br />
             ちょっとした取付、軽い片付け など
           </div>
         </div>
