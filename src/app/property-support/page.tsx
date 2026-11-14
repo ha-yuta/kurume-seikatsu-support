@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "不動産オーナー・管理会社向け現場サポート｜くるめ生活サポート",
-  description: "東久留米を拠点に、不動産管理会社・賃貸オーナー様の現地確認・写真報告・軽作業・家具組立・敷地の環境整備をご相談いただけます。事前見積もり・請求書払いにも対応。",
+  description: "東京都東久留米市を拠点に、関東一円の不動産オーナー・管理会社様から現地確認・写真報告・軽作業などのご相談に対応。遠方は内容・移動距離に応じて個別見積もり。",
   alternates: { canonical: "/property-support" },
   openGraph: { title: "不動産管理の「ちょっと手が足りない」に｜くるめ生活サポート", description: "不動産オーナー・管理会社様向けの現地確認・写真報告・軽作業サポート。", url: "https://kurume-support.com/property-support", type: "website" },
 };
@@ -29,7 +29,7 @@ return <main className={styles.page}>
 </div></section>
 <section className={styles.section}><div className={styles.wrap}><p className={styles.kicker}>SERVICES</p><h2>こんな場面でご相談ください</h2><div className={styles.cards}>{work.map(([title,desc],i)=><article className={styles.card} key={title}><span>0{i+1}</span><h3>{title}</h3><p>{desc}</p></article>)}</div><p className={styles.muted}>※ご相談いただける業務例です。すべてに対応実績があるという意味ではありません。作業可否は内容や設備・安全条件により個別に判断します。</p></div></section>
 <section className={styles.band}><div className={styles.wrap}><p className={styles.kicker}>OUR APPROACH</p><h2>小さなご依頼から、信頼を積み重ねる。</h2><p>家具組立・家具移動・片付けなどの作業経験を活かし、現場での状況確認と丁寧なご説明を大切にします。現場の様子を写真で報告するなど、担当者様が状況を把握しやすい対応を心がけます。</p><div className={styles.tags}><span>単発のご相談から</span><span>作業前の料金説明</span><span>写真付き報告に対応</span><span>請求書・銀行振込に対応</span></div></div></section>
-<section className={styles.section}><div className={styles.wrap}><p className={styles.kicker}>PRICE & AREA</p><h2>料金・対応エリア</h2><div className={styles.prices}><div><span>訪問サポート（軽作業1時間まで）</span><strong>5,500円（税込）</strong></div><div><span>延長30分</span><strong>2,000円（税込）</strong></div><div><span>現地確認・写真報告・半日作業・増員対応など</span><strong>個別お見積もり</strong></div></div><p className={styles.muted}>現地確認のみのご依頼は、距離・報告内容に応じて事前に料金をご案内します。部材費や駐車料金が必要な場合もご説明します。</p><h3>対応エリア</h3><p>東久留米市・小平市・西東京市・清瀬市・東村山市を中心に、調布市・所沢市・新座市なども内容によりご相談を承ります。</p></div></section>
+<section className={styles.section}><div className={styles.wrap}><p className={styles.kicker}>PRICE & AREA</p><h2>料金・対応エリア</h2><div className={styles.prices}><div><span>訪問サポート（軽作業1時間まで）</span><strong>5,500円（税込）</strong></div><div><span>延長30分</span><strong>2,000円（税込）</strong></div><div><span>現地確認・写真報告・半日作業・増員対応など</span><strong>個別お見積もり</strong></div></div><p className={styles.muted}>表示料金は近隣エリアの基本目安です。遠方への出張は移動距離・作業内容・所要時間を確認し、出張費等を含めて個別にお見積もりします。部材費・高速料金・駐車料金等が必要な場合も事前にご説明します。</p><h3>対応エリア</h3><p>東京都東久留米市を拠点に、東京・埼玉・神奈川・千葉・茨城・栃木・群馬など、関東一円からのご相談を承ります。遠方の物件も内容や日程に応じて対応を検討いたしますので、まずは所在地とご依頼内容をお知らせください。</p></div></section>
 <section className={styles.stepsSection}><div className={styles.wrap}><p className={styles.kicker}>HOW IT WORKS</p><h2>ご相談から完了まで</h2><div className={styles.steps}>{flow.map(([title,desc],i)=><div className={styles.step} key={title}><b>0{i+1}</b><div><h3>{title}</h3><p>{desc}</p></div></div>)}</div><p className={styles.safety}>安全と法令遵守のため、電気工事や給排水設備の専門工事、危険な高所作業、許可を要する廃棄物の収集運搬などは対応対象外です。入居中のお部屋への立ち入りは必要な承諾・権限を確認します。</p></div></section>
 <section className={styles.contact}><div className={styles.wrap}><p className={styles.kicker}>CONTACT</p><h2>現場の小さなお困りごと、<br/>まずはご相談ください。</h2><p>物件所在地・現場写真・希望する対応内容をお知らせいただけるとスムーズです。</p><div className={styles.actions}><a className={styles.line} href={LINE_URL} target="_blank" rel="noopener noreferrer">公式LINEで相談する</a><a className={styles.phoneLight} href={PHONE_TEL_LINK}>{PHONE_NUMBER}</a></div><small>受付 9:00〜18:00／主に金・土・日（予約制）</small></div></section>
 <footer><div className={styles.wrap}>© 2026 くるめ生活サポート　 <Link href="/">トップページへ戻る</Link></div></footer>
